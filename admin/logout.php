@@ -1,0 +1,9 @@
+<?php
+	session_name("akses");
+	session_start();
+	unset($_SESSION["akses"]);
+	session_unset();
+	session_destroy();
+	header("Location:masuk.html");
+	exit();
+?>

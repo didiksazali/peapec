@@ -1,0 +1,12 @@
+home [ok]
+profil [ok]
+cara pembelian [ok]
+kontak kami [ok]
+kategori barang [ok]
+ukm [ok]
+produk [ok]
+detail produk [ok]
+
+member [not ok]
+keranjang [not ok]
+beli item [not ok]

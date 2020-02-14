@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} -f [OR]
+RewriteCond %{SCRIPT_FILENAME} -d
+
+RewriteRule ^.*$ - [S=84]
+
+RewriteRule ^artikel/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-_]+)\.html$ artikel.php?kategori=$1&item=$2 [QSA,NC]
+RewriteRule ^artikel/([a-zA-Z0-9]+)$ artikel.php?kategori=$1 [QSA,NC]
+RewriteRule ^artikel$ artikel.php [QSA,NC]
+
+RewriteRule ^index.html$ index.php [QSA,NC]
+
+RewriteRule ^profil.html$ index.php?page=v_profil.php [QSA,NC]
+RewriteRule ^cara-pembelian.html$ index.php?page=v_cara_pembelian.php [QSA,NC]
+RewriteRule ^kontak.html$ index.php?page=v_kontak.php [QSA,NC]
+
+
+RewriteRule ^produk-ukm.html$ index.php?page=v_produk_ukm.php [QSA,NC]
+RewriteRule ^produk-kategori.html$ index.php?page=v_produk_kategori.php [QSA,NC]
+RewriteRule ^detail.html$ index.php?page=detail.php [QSA,NC]
+
+</ifModule>

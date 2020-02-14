@@ -1,0 +1,54 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} -f [OR]
+RewriteCond %{SCRIPT_FILENAME} -d
+
+RewriteRule ^.*$ - [S=84]
+
+RewriteRule ^artikel/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-_]+)\.html$ artikel.php?kategori=$1&item=$2 [QSA,NC]
+RewriteRule ^artikel/([a-zA-Z0-9]+)$ artikel.php?kategori=$1 [QSA,NC]
+RewriteRule ^artikel$ artikel.php [QSA,NC]
+
+RewriteRule ^index.html$ important.php [QSA,NC]
+
+
+RewriteRule ^profil.html$ important.php?page=admProfil.php [QSA,NC]
+RewriteRule ^tambah-profil.html$ important.php?page=addProfil.php [QSA,NC]
+RewriteRule ^edit-profil.html$ important.php?page=editProfil.php [QSA,NC]
+RewriteRule ^simpan-profil.html$ important.php?page=actProfil.php [QSA,NC]
+
+#cara pembelian barang
+RewriteRule ^cara-pembelian.html$ important.php?page=admCaraPembelian.php [QSA,NC]
+RewriteRule ^tambah-cara-pembelian.html$ important.php?page=addCaraPembelian.php [QSA,NC]
+RewriteRule ^edit-cara-pembelian.html$ important.php?page=editCaraPembelian.php [QSA,NC]
+RewriteRule ^simpan-cara-pembelian.html$ important.php?page=actCaraPembelian.php [QSA,NC]
+
+#kontak
+RewriteRule ^kontak.html$ important.php?page=admKontak.php [QSA,NC]
+RewriteRule ^tambah-kontak.html$ important.php?page=addKontak.php [QSA,NC]
+RewriteRule ^edit-kontak.html$ important.php?page=editKontak.php [QSA,NC]
+RewriteRule ^simpan-kontak.html$ important.php?page=actKontak.php [QSA,NC]
+
+#Kategori
+RewriteRule ^kategori.html$ important.php?page=admKategori.php [QSA,NC]
+RewriteRule ^tambah-kategori.html$ important.php?page=addKategori.php [QSA,NC]
+RewriteRule ^edit-kategori.html$ important.php?page=editKategori.php [QSA,NC]
+RewriteRule ^hapus-kategori.html$ important.php?page=delKategori.php [QSA,NC]
+
+#UKM
+RewriteRule ^ukm.html$ important.php?page=admUKM.php [QSA,NC]
+RewriteRule ^tambah-ukm.html$ important.php?page=addUKM.php [QSA,NC]
+RewriteRule ^edit-ukm.html$ important.php?page=editUKM.php [QSA,NC]
+RewriteRule ^hapus-ukm.html$ important.php?page=delUKM.php [QSA,NC]
+
+#Barang
+RewriteRule ^barang.html$ important.php?page=admBarang.php [QSA,NC]
+RewriteRule ^tambah-barang.html$ important.php?page=addBarang.php [QSA,NC]
+RewriteRule ^edit-barang.html$ important.php?page=editBarang.php [QSA,NC]
+RewriteRule ^hapus-barang.html$ important.php?page=delBarang.php [QSA,NC]
+
+RewriteRule ^masuk.html$ login.php [QSA,NC]
+RewriteRule ^keluar.html$ logout.php [QSA,NC]
+
+</ifModule>
