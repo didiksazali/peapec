@@ -1,2 +1,2 @@
 # peapec
-Aplikasi Web E-Commere
+Aplikasi Web E-Commerce
